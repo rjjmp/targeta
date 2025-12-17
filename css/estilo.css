@@ -97,10 +97,13 @@ body {
 }
 
 @media (max-width: 768px) {
-    .card {
+     .card {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         max-width: none;
+        min-height: 100vh;
+        height: 80%;
+        padding-bottom: 100px;
     }
 
     .side-image {
