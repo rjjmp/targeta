@@ -99,6 +99,8 @@ body {
 @media (max-width: 768px) {
     .card {
         flex-direction: column;
+        width: 90%;
+        max-width: none;
     }
 
     .side-image {
