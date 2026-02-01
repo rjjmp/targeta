@@ -1,69 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarjeta de Juan José</title>
-<link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Presentacion</title>
+    <meta name="autor" content="Rosa Julia">
+    <link rel="stylesheet" href="css/estilo.css">
+
 </head>
 <body>
-
-<div class="card">
-
-  
-    <div class="card-content">
-        <h1 class="nombre">
-            Juan Jose <br>
-            <span class="profesion">Electricista</span>
-        </h1>
-        <p class="subtitulo">Estamos a tu servicio</p>
-
-        <div class="section-title">Para Transferencias</div>
-
-        <div class="bank banreservas" onclick="mostrar('banreservas')">
-            Banreservas
-        </div>
-        <div class="info" id="banreservas">
-            Cuenta: <b>9606576798</b><br>
-            Cédula: <b>031-0466633-8</b>
-        </div>
-
-       
-        <div class="bank popular" onclick="mostrar('popular')">
-            Santa Cruz
-        </div>
-        <div class="info" id="popular">
-            Cuenta: <b>11005000209846</b><br>
-            Cédula: <b>031-0466633-8</b>
-        </div>
-
- 
-        <div class="bank bhd" onclick="mostrar('bhd')">
-            BHD
-        </div>
-        <div class="info" id="bhd">
-            Cuenta: <b>38305310019</b><br>
-            Cédula: <b>031-0466633-8</b>
-        </div>
-
-        <div class="contacto">
+    <main>
+        <header class="izquierda">
+        <img src="imagenes/Captura.PNG" alt="logo" title="logo">
+         <p class="subtitulo">Estamos a tu servicio!!!</p>
+          <div class="contacto">
             📞 Contacto: <b>829-847-5514</b>
         </div>
-    </div>
+         </header>
+         <section class="derecha">
+         <div class="section-title">Para Transferencias</div>
+          
 
- 
-    <div class="side-image">
-    <img src="imagen/Captura2.PNG" alt="imagen" width="300" height="380">
-   </div>
+       <div class="bank banreservas" onclick="mostrar(this)">
+    Banreservas
+    <div class="info">
+        Cuenta: <b>9606576798</b><br>
+        Cédula: <b>031-0466633-8</b>
+    </div>
 </div>
 
+<div class="bank popular" onclick="mostrar(this)">
+    Santa Cruz
+    <div class="info">
+        Cuenta: <b>11005000209846</b><br>
+        Cédula: <b>031-0466633-8</b>
+    </div>
+</div>
+
+<div class="bank bhd" onclick="mostrar(this)">
+    BHD
+    <div class="info">
+        Cuenta: <b>38305310019</b><br>
+        Cédula: <b>031-0466633-8</b>
+    </div>
+</div>
+
+
 <script>
-function mostrar(id) {
-    const secciones = document.querySelectorAll('.info');
-    secciones.forEach(s => s.style.display = "none");
-    document.getElementById(id).style.display = "block";
+function mostrar(boton) {
+    const infos = document.querySelectorAll('.info');
+
+    infos.forEach(info => {
+        if (info !== boton.querySelector('.info')) {
+            info.style.display = "none";
+        }
+    });
+
+    const infoActual = boton.querySelector('.info');
+
+    infoActual.style.display =
+        infoActual.style.display === "block" ? "none" : "block";
 }
 </script>
 
+
+    </main>
+    
 </body>
 </html>
+
